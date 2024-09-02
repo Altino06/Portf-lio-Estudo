@@ -1,0 +1,377 @@
+
+/* Estilização geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      .poppins-thin {
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      .poppins-extralight {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+    
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+
+}
+h2.tittle {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+h2.tittle span{
+    color: #f5027b;
+}
+button:hover{
+    box-shadow: 0px 0px 8px #991c61;
+    transform: scale(1.05);
+}
+
+
+/* Estilo do cabeçalho */
+header{ 
+    padding: 10px 4%;
+
+}
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    color: #b4b3b3;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header nav.menu-desktop a:hover{
+    color: #fff;
+    transform: scale(1.05);
+} 
+header nav ul {
+    list-style-type: none;
+}
+header nav.menu-desktop ul li {
+   display: inline-block;
+   padding: 0 40px;
+}
+header .contact button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #f5027b;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+    /* Menu mobile */
+    .btnAbrirMenu{
+        color: #f5027b;
+        font-size: 40px;
+
+    }
+   .overlayMenu {
+        background-color: #0000008a;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+   }
+    .menuMobile {
+        background-color: #000;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .2s;
+    }
+    .menuMobile.abrirMenu {
+        width: 70%;
+    }
+    .menuMobile.abrirMenu ~ .overlayMenu{
+        display: block;
+    }
+    .menuMobile .btnFechar {
+        color: #f5027b;
+        font-size: 30px;
+    }
+    .menuMobile .btnFechar{
+        padding: 20px 5%;
+    }
+    .menuMobile nav ul {
+        text-align: right;
+
+    }
+    .menuMobile nav ul li a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+    .menuMobile nav ul li a:hover {
+        background-color:#f5027b;
+        color: #000;
+
+    }
+
+ 
+/* Estilização tela inicial */
+section.sobreMim{
+    padding: 40px 4%;
+
+}
+.container img {
+    max-width:350px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 10px;
+}
+
+section.sobreMim .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    
+}
+.sobreMim h1{
+color: #fff;
+font-size: 38px;
+line-height: 40px;
+}
+.sobreMim .textoInicial p {
+    color: #fff;
+    margin: 40px 0;
+    font-size: 17px;
+}
+.sobreMim .textoInicial .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: #f5027b;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: .2s;
+}
+
+.sobreMim .container img{
+    position: relative;
+    animation: float 2s ease-in-out infinite alternate;
+}
+@keyframes float{
+    0%{
+        top: 0;
+    }
+    100% {
+        top: 30px
+    }
+}
+/* Estilos especialidades */
+section .especialidades {
+    padding: 40px 4%;
+
+}
+section.especialidades .flex{
+    gap: 40px;
+}
+.especialidades .especialidades-box {
+    color: #fff;
+    padding: 80px;
+    margin-top: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #6e6c6c;
+} 
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #f5027b;
+}
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+/* Estilização Formação */
+section.formacao{
+    padding: 40px 4%;
+
+}
+.logoFaculdade img {
+    max-width:350px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 10px;
+}
+
+section.formacao .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    
+}
+.formacao h1{
+color: #fff;
+font-size: 38px;
+line-height: 40px;
+}
+.formacao .formAcademica p {
+    color: #fff;
+    margin: 40px 0;
+    font-size: 17px;
+}
+.formacao .formAcademica span {
+    color: #f5027b;
+}
+/* Portfólio */
+section.projetos {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #c0bcbc75;
+}
+section.projetos .flex {
+justify-content: space-around;
+margin-top: 60px;
+align-items: center;
+}
+
+
+.imgPort {
+    width: 360px;
+    height: 460px;
+    background-color: #f5027b;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+.imgPort:hover{
+    background-position: 100% 100%;
+
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: 5s;
+}
+.overlay:hover {
+    opacity: 1;
+}
+@media screen and (max-width: 1020px){
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+    .sobreMim .flex {
+        flex-direction: column-reverse;
+    }
+    h2.tittle {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    /* cabeçalho */
+    .interface .logo img {
+        width: 100%;
+        align-items: center;
+    }
+    .menu-desktop,.contact {
+        display: none; 
+    }
+
+    /* sobre mim pag edit */
+
+    section.sobreMim .flex{
+        gap: 40px;
+    }
+    section.sobreMim{
+        padding: 0px 8%;
+    
+    }
+    .sobreMim .container img{
+        width: 100%;
+    }
+    
+    .sobreMim h1{
+        font-size: 30px;
+        line-height: 30px;
+        }
+
+        /* Especialidades */
+    
+    section .especialidades {
+        padding: 30px 8%;    
+        }
+        /* Formação acadêmica */
+        .formacao h1{
+            font-size: 30px;
+        }
+        
+        .formacao .formAcademica p {
+            font-size: 22px;
+            }
+        
+}
